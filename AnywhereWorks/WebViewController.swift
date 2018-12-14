@@ -26,7 +26,7 @@ class WebViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = URL(string: "https://fullcreative.fullauth.com/o/oauth2/auth?response_type=code&client_id=29354-b1485cb9e83aff68b46e20433e245cb1&scope=awapis.users.read%20awapis.identity&redirect_uri=urn:ietf:wg:oauth:2.0:oob:auto&approval_prompt=force&state=https://fullcreative.fullauth.com")
+        let url = URL(string: "")
         
         
         let request = URLRequest(url: url!)
@@ -86,10 +86,10 @@ class WebViewController: UIViewController {
     func requestAccessToken(){
         
         
-        Alamofire.request("https://fullcreative.fullauth.com/o/oauth2/v1/token", method: .post, parameters: [
-            "client_id"    : "29354-b1485cb9e83aff68b46e20433e245cb1",
-            "client_secret": "ZGHXq-hzTKCqlmNB7G8ZZiDbbNygFlJIFlBO2SLa",
-            "redirect_uri" : "urn:ietf:wg:oauth:2.0:oob:auto" ,
+        Alamofire.request("", method: .post, parameters: [
+            "client_id"    : "",
+            "client_secret": "",
+            "redirect_uri" : "" ,
             "code" : code ,
             "grant_type": "authorization_code" ], encoding: URLEncoding.httpBody, headers: ["Content_Type":"application/x-www-form-urlencoded"]).responseJSON{ (response) in
                 

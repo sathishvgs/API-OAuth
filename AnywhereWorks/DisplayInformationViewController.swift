@@ -122,13 +122,13 @@ class DisplayInformationViewController: UIViewController {
             return
         }
         
-        let param: Parameters = ["apiKey" : "b2739ff0eb7543e5a5c43e88f3cb2a0bd0d0247d",
+        let param: Parameters = ["apiKey" : "",
                      "email" : "\(mailId)",
             "startTime" : startTimeInterval,
             "endTime" : endTimeInterval ]
         
         
-        let url = URL(string: "https://mint4-dot-live-adaptivecourse.appspot.com/v1/completedMinutes")!
+        let url = URL(string: "")!
         
         Alamofire.request(url, method: .post, parameters: param, encoding: URLEncoding.default, headers: ["Content_Type" : "application/json"]).responseJSON { (response) in
             
@@ -152,7 +152,7 @@ class DisplayInformationViewController: UIViewController {
                         
                         if let user = data["data"] as? [String : Any] {
                             
-                            if let userValue = user["sathish.gurunathan@adaptavantcloud.com"] as? [String : Any]{
+                            if let userValue = user[""] as? [String : Any]{
                                 
                                   self.totalMinutes = userValue["minutes"] as! Int
                                 print(self.totalMinutes)

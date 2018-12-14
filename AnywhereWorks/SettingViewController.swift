@@ -41,7 +41,7 @@ class SettingViewController: UIViewController {
         let headers = ["Authorization" : "Bearer \(accessToken)"]
         
         
-        Alamofire.request("https://api.anywhereworks.com/api/v1/user/me", method: .get, headers: headers)
+        Alamofire.request("", method: .get, headers: headers)
             .responseJSON { (response) in
                 
                 
